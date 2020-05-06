@@ -9,6 +9,8 @@ public class MathExceptionIfElse {
     public static void main(String[] args) {
 
 
+        System.out.println("Test");
+
         mainMenu();
 
 
@@ -105,14 +107,14 @@ public class MathExceptionIfElse {
             Random random = new Random();
             int num1 = random.nextInt(10);
             int num2 = random.nextInt(10);
-            if(num2 == 0) {
-                num2 = random.nextInt(9)+1;
+            if (num2 == 0) {
+                num2 = random.nextInt(9) + 1;
             }
             System.out.println("What is " + num1 + " / " + num2 + "?");
             int answer = scan.nextInt();
 
 
-            if(answer == num1/num2) {
+            if (answer == num1 / num2) {
                 System.out.println("Your solution was correct!!");
             } else {
                 System.out.println("Your solution was wrong");
