@@ -9,6 +9,7 @@ public class MathExceptionIfElse {
     public static void main(String[] args) {
 
         System.out.println("Test New");
+        System.out.println("is crap");
 
         mainMenu();
 
