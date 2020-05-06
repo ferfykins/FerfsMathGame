@@ -10,6 +10,7 @@ public class MathExceptionIfElse {
 
 
         System.out.println("Test");
+        System.out.println("Test2");
 
         mainMenu();
 
