@@ -3,7 +3,7 @@ package com.company;
 import java.util.Random;
 import java.util.Scanner;
 
-public class MathTryCatch {
+public class Modularize {
 
 
     public static void main(String[] args) {
@@ -13,6 +13,14 @@ public class MathTryCatch {
 
 
     }
+
+
+
+
+
+
+
+
 
 
     public static void mainMenu() {
@@ -49,6 +57,23 @@ public class MathTryCatch {
         }
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     public static void additionQuestions() {
@@ -96,31 +121,23 @@ public class MathTryCatch {
 
 
     public static void divisionQuestions() {
+        Scanner scan = new Scanner(System.in);
 
-        try {
-            Scanner scan = new Scanner(System.in);
+        System.out.println("How many division questions, would you like?");
+        int numberOfQuestions = scan.nextInt();
 
-            System.out.println("How many division questions, would you like?");
-            int numberOfQuestions = scan.nextInt();
-            scan.nextLine();
+        for (int i = 1; i <= numberOfQuestions; i++) {
+            Random random = new Random();
+            int num1 = random.nextInt(9)+1;
+            int num2 = random.nextInt(9)+1;
+            System.out.println("What is " + num1 + " / " + num2 + "?");
+            int answer = scan.nextInt();
 
-            for (int i = 1; i <= numberOfQuestions; i++) {
-                Random random = new Random();
-                int num1 = random.nextInt(10);
-                int num2 = random.nextInt(10);
-                System.out.println("What is " + num1 + " / " + num2 + "?");
-                int answer = scan.nextInt();
-                scan.nextLine();
-
-                if (answer == num1 / num2) {
-                    System.out.println("Your solution was correct!!");
-                } else {
-                    System.out.println("Your solution was wrong");
-                }
-
+            if (answer == num1 / num2) {
+                System.out.println("Your solution was correct!!");
+            } else {
+                System.out.println("Your solution was wrong");
             }
-        } catch (ArithmeticException e) {
-            System.out.println("Cannot divide by zero!!!");
         }
     }
 
@@ -145,8 +162,6 @@ public class MathTryCatch {
             }
         }
     }
-
-
 }
 
 
