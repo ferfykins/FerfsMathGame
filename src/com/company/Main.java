@@ -15,11 +15,14 @@ public class Main {
 
     public static void main(String[] args) {
 
+        try {
 
             mainMenu();
 
-
-
+        } catch  (Exception e) {
+            System.out.println("Not a valid number!");
+            mainMenu();
+        }
 
     }
 

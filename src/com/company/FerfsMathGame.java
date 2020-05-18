@@ -8,8 +8,14 @@ public class FerfsMathGame {
 
     public static void main(String[] args) {
 
+        try {
 
-       mainMenu();
+            mainMenu();
+
+        } catch  (Exception e) {
+            System.out.println("Not a valid number!");
+            mainMenu();
+        }
 
 
     }

@@ -9,7 +9,16 @@ public class MathTryCatch {
     public static void main(String[] args) {
 
 
-        mainMenu();
+        try {
+
+            mainMenu();
+
+        } catch  (Exception e) {
+            System.out.println("Not a valid number!");
+            mainMenu();
+        }
+
+
 
 
     }
@@ -121,6 +130,7 @@ public class MathTryCatch {
             }
         } catch (ArithmeticException e) {
             System.out.println("Cannot divide by zero!!!");
+            divisionQuestions();
         }
     }
 
