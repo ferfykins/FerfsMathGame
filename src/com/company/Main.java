@@ -8,6 +8,7 @@
 
 package com.company;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -19,10 +20,16 @@ public class Main {
 
             mainMenu();
 
-        } catch  (Exception e) {
+        } catch  (InputMismatchException e) {
             System.out.println("Not a valid number!");
             mainMenu();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
+        
+
+
 
     }
 
