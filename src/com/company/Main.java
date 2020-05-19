@@ -6,6 +6,7 @@
         "Would you like to play again? (1) Yes (2) No". 2*/
 
 
+
 package com.company;
 
 import java.util.InputMismatchException;
@@ -27,7 +28,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        
+
 
 
 
