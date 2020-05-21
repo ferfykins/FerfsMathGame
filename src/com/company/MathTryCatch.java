@@ -109,14 +109,16 @@ public class MathTryCatch {
 
     public static void divisionQuestions() {
 
-        try {
-            Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-            System.out.println("How many division questions, would you like?");
-            int numberOfQuestions = scan.nextInt();
-            scan.nextLine();
+        System.out.println("How many division questions, would you like?");
+        int numberOfQuestions = scan.nextInt();
+        scan.nextLine();
 
-            for (int i = 1; i <= numberOfQuestions; i++) {
+        for (int i = 1; i <= numberOfQuestions; i++) {
+
+            try {
+
                 Random random = new Random();
                 int num1 = random.nextInt(10);
                 int num2 = random.nextInt(10);
@@ -130,10 +132,10 @@ public class MathTryCatch {
                     System.out.println("Your solution was wrong");
                 }
 
+            } catch (ArithmeticException e) {
+                System.out.println("Cannot divide by zero!!!");
             }
-        } catch (ArithmeticException e) {
-            System.out.println("Cannot divide by zero!!!");
-            divisionQuestions();
+
         }
     }
 
