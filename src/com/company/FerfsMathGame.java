@@ -7,7 +7,11 @@ import java.util.Scanner;
 public class FerfsMathGame {
 
 
+
+
     public static void main(String[] args) {
+
+
 
         try {
 
@@ -27,11 +31,7 @@ public class FerfsMathGame {
     }
 
 
-
-
-
-
-
+    
 
 
 
@@ -42,7 +42,7 @@ public class FerfsMathGame {
 
             System.out.println("Welcome to ferfys math game!!");
             System.out.println("What subject of math would you like testing in?");
-            System.out.println("Choose 1-4: 1-Addition, 2-Subtraction, 3-Division, 4-Multiplication");
+            System.out.println("Choose 1-4: 1-Addition, 2-Subtraction, 3-Division, 4-Multiplication, 5-for answer statistics");
             System.out.println("Or 0 to exit program");
             Scanner scan = new Scanner(System.in);
             int subjectNumber = scan.nextInt();
@@ -61,6 +61,8 @@ public class FerfsMathGame {
                 case 4:
                     multiplicationQuestions();
                     break;
+                case 5:
+                    System.out.println();
                 case 0:
                     System.out.println("Quitting ferfys math game...");
                     game = false;
@@ -91,89 +93,336 @@ public class FerfsMathGame {
     public static void additionQuestions() {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("How many addition questions, would you like?");
-        int numberOfQuestions = scan.nextInt();
 
-        for (int i = 1; i <= numberOfQuestions; i++) {
-            Random random = new Random();
-            int num1 = random.nextInt(10);
-            int num2 = random.nextInt(10);
-            System.out.println("What is " + num1 + " + " + num2 + "?");
-            int answer = scan.nextInt();
+        System.out.println("What difficulty would you like?: 1 for Beginner, 2 for intermediate, or 3 for advanced!");
+        int difficulty = scan.nextInt();
 
-            if (answer == num1 + num2) {
-                System.out.println("Your solution was correct!!");
-            } else {
-                System.out.println("Your solution was wrong");
+
+
+
+        if(difficulty == 1) {
+
+            System.out.println("How many addition questions, would you like?");
+            int numberOfQuestions = scan.nextInt();
+
+            for (int i = 1; i <= numberOfQuestions; i++) {
+                Random random = new Random();
+                int num1 = random.nextInt(10);
+                int num2 = random.nextInt(10);
+                System.out.println("What is " + num1 + " + " + num2 + "?");
+                int answer = scan.nextInt();
+
+                if (answer == num1 + num2) {
+                    System.out.println("Your solution was correct!!");
+                } else {
+                    System.out.println("Your solution was wrong");
+                }
+            }
+        } else if(difficulty == 2) {
+            System.out.println("How many addition questions, would you like?");
+            int numberOfQuestions = scan.nextInt();
+
+            for (int i = 1; i <= numberOfQuestions; i++) {
+                Random random = new Random();
+                int num1 = random.nextInt(89) + 10;
+                int num2 = random.nextInt(89) + 10;
+                System.out.println("What is " + num1 + " + " + num2 + "?");
+                int answer = scan.nextInt();
+
+                if (answer == num1 + num2) {
+                    System.out.println("Your solution was correct!!");
+                } else {
+                    System.out.println("Your solution was wrong");
+                }
+            }
+
+        } else if(difficulty == 3) {
+            System.out.println("How many addition questions, would you like?");
+            int numberOfQuestions = scan.nextInt();
+
+            for (int i = 1; i <= numberOfQuestions; i++) {
+                Random random = new Random();
+                int num1 = random.nextInt(899) + 100;
+                int num2 = random.nextInt(899) + 100;
+                System.out.println("What is " + num1 + " + " + num2 + "?");
+                int answer = scan.nextInt();
+
+                if (answer == num1 + num2) {
+                    System.out.println("Your solution was correct!!");
+                } else {
+                    System.out.println("Your solution was wrong");
+                }
             }
         }
+
+
+
+
     }
+
+
+
+
+
+
+
+
 
 
     public static void subtractionQuestions() {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("How many subtraction questions, would you like?");
-        int numberOfQuestions = scan.nextInt();
+        System.out.println("What difficulty would you like?: 1 for Beginner, 2 for intermediate, or 3 for advanced!");
+        int difficulty = scan.nextInt();
 
-        for (int i = 1; i <= numberOfQuestions; i++) {
-            Random random = new Random();
-            int num1 = random.nextInt(10);
-            int num2 = random.nextInt(10);
-            System.out.println("What is " + num1 + " - " + num2 + "?");
-            int answer = scan.nextInt();
 
-            if (answer == num1 - num2) {
-                System.out.println("Your solution was correct!!");
-            } else {
-                System.out.println("Your solution was wrong");
+
+        if(difficulty == 1) {
+
+            System.out.println("How many subtraction questions, would you like?");
+            int numberOfQuestions = scan.nextInt();
+
+            for (int i = 1; i <= numberOfQuestions; i++) {
+                Random random = new Random();
+                int num1 = random.nextInt(10);
+                int num2 = random.nextInt(10);
+                System.out.println("What is " + num1 + " - " + num2 + "?");
+                int answer = scan.nextInt();
+
+                if (answer == num1 - num2) {
+                    System.out.println("Your solution was correct!!");
+                } else {
+                    System.out.println("Your solution was wrong");
+                }
+            }
+        } else if(difficulty == 2) {
+            System.out.println("How many subtraction questions, would you like?");
+            int numberOfQuestions = scan.nextInt();
+
+            for (int i = 1; i <= numberOfQuestions; i++) {
+                Random random = new Random();
+                int num1 = random.nextInt(89) + 10;
+                int num2 = random.nextInt(89) + 10;
+                System.out.println("What is " + num1 + " - " + num2 + "?");
+                int answer = scan.nextInt();
+
+                if (answer == num1 - num2) {
+                    System.out.println("Your solution was correct!!");
+                } else {
+                    System.out.println("Your solution was wrong");
+                }
+            }
+        } else if(difficulty == 3) {
+            System.out.println("How many subtraction questions, would you like?");
+            int numberOfQuestions = scan.nextInt();
+
+            for (int i = 1; i <= numberOfQuestions; i++) {
+                Random random = new Random();
+                int num1 = random.nextInt(899) + 100;
+                int num2 = random.nextInt(899) + 100;
+                System.out.println("What is " + num1 + " - " + num2 + "?");
+                int answer = scan.nextInt();
+
+                if (answer == num1 - num2) {
+                    System.out.println("Your solution was correct!!");
+                } else {
+                    System.out.println("Your solution was wrong");
+                }
             }
         }
+
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     public static void divisionQuestions() {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("How many division questions, would you like?");
-        int numberOfQuestions = scan.nextInt();
+        System.out.println("What difficulty would you like?: 1 for Beginner, 2 for intermediate, or 3 for advanced!");
+        int difficulty = scan.nextInt();
 
-        for (int i = 1; i <= numberOfQuestions; i++) {
-            Random random = new Random();
-            int num1 = random.nextInt(9)+1;
-            int num2 = random.nextInt(9)+1;
-            System.out.println("What is " + num1 + " / " + num2 + "?");
-            int answer = scan.nextInt();
 
-            if (answer == num1 / num2) {
-                System.out.println("Your solution was correct!!");
-            } else {
-                System.out.println("Your solution was wrong");
+        if (difficulty == 1) {
+            System.out.println("How many division questions, would you like?");
+            int numberOfQuestions = scan.nextInt();
+
+            for (int i = 1; i <= numberOfQuestions; i++) {
+                Random random = new Random();
+                int num1 = random.nextInt(9) + 1;
+                int num2 = random.nextInt(9) + 1;
+                System.out.println("What is " + num1 + " / " + num2 + "?");
+                int answer = scan.nextInt();
+
+                if (answer == num1 / num2) {
+                    System.out.println("Your solution was correct!!");
+                } else {
+                    System.out.println("Your solution was wrong");
+                }
+            }
+        } else if(difficulty == 2) {
+            System.out.println("How many division questions, would you like?");
+            int numberOfQuestions = scan.nextInt();
+
+            for (int i = 1; i <= numberOfQuestions; i++) {
+                Random random = new Random();
+                int num1 = random.nextInt(89) + 10;
+                int num2 = random.nextInt(89) + 10;
+                System.out.println("What is " + num1 + " / " + num2 + "?");
+                int answer = scan.nextInt();
+
+                if (answer == num1 / num2) {
+                    System.out.println("Your solution was correct!!");
+                } else {
+                    System.out.println("Your solution was wrong");
+                }
+            }
+        } else if(difficulty == 3) {
+            System.out.println("How many division questions, would you like?");
+            int numberOfQuestions = scan.nextInt();
+
+            for (int i = 1; i <= numberOfQuestions; i++) {
+                Random random = new Random();
+                int num1 = random.nextInt(899) + 100;
+                int num2 = random.nextInt(899) + 100;
+                System.out.println("What is " + num1 + " / " + num2 + "?");
+                int answer = scan.nextInt();
+
+                if (answer == num1 / num2) {
+                    System.out.println("Your solution was correct!!");
+                } else {
+                    System.out.println("Your solution was wrong");
+                }
             }
         }
+
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     public static void multiplicationQuestions() {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("How many multiplication questions, would you like?");
-        int numberOfQuestions = scan.nextInt();
+        System.out.println("What difficulty would you like?: 1 for Beginner, 2 for intermediate, or 3 for advanced!");
+        int difficulty = scan.nextInt();
 
-        for (int i = 1; i <= numberOfQuestions; i++) {
-            Random random = new Random();
-            int num1 = random.nextInt(10);
-            int num2 = random.nextInt(10);
-            System.out.println("What is " + num1 + " * " + num2 + "?");
-            int answer = scan.nextInt();
+        if(difficulty == 1) {
 
-            if (answer == num1 * num2) {
-                System.out.println("Your solution was correct!!");
-            } else {
-                System.out.println("Your solution was wrong");
+            System.out.println("How many multiplication questions, would you like?");
+            int numberOfQuestions = scan.nextInt();
+
+            for (int i = 1; i <= numberOfQuestions; i++) {
+                Random random = new Random();
+                int num1 = random.nextInt(10);
+                int num2 = random.nextInt(10);
+                System.out.println("What is " + num1 + " * " + num2 + "?");
+                int answer = scan.nextInt();
+
+                if (answer == num1 * num2) {
+                    System.out.println("Your solution was correct!!");
+                } else {
+                    System.out.println("Your solution was wrong");
+                }
+            }
+        } else if(difficulty == 2) {
+            System.out.println("How many multiplication questions, would you like?");
+            int numberOfQuestions = scan.nextInt();
+
+            for (int i = 1; i <= numberOfQuestions; i++) {
+                Random random = new Random();
+                int num1 = random.nextInt(89) + 10;
+                int num2 = random.nextInt(89) + 10;
+                System.out.println("What is " + num1 + " * " + num2 + "?");
+                int answer = scan.nextInt();
+
+                if (answer == num1 * num2) {
+                    System.out.println("Your solution was correct!!");
+                } else {
+                    System.out.println("Your solution was wrong");
+                }
+            }
+        } else if(difficulty == 3) {
+            System.out.println("How many multiplication questions, would you like?");
+            int numberOfQuestions = scan.nextInt();
+
+            for (int i = 1; i <= numberOfQuestions; i++) {
+                Random random = new Random();
+                int num1 = random.nextInt(899) + 100;
+                int num2 = random.nextInt(899) + 100;
+                System.out.println("What is " + num1 + " * " + num2 + "?");
+                int answer = scan.nextInt();
+
+                if (answer == num1 * num2) {
+                    System.out.println("Your solution was correct!!");
+                } else {
+                    System.out.println("Your solution was wrong");
+                }
             }
         }
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
