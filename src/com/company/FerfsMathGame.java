@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class FerfsMathGame {
 
 
+
+
     public static void main(String[] args) {
 
 
@@ -54,8 +56,9 @@ public class FerfsMathGame {
                 case 5:
                     System.out.println();
                     System.out.println();
-                    System.out.println("You had " + numCorrect + " anwers, and " + numWrong + " wrong answers! Which would be: " + percentCorrect + "% correct!");
+                    System.out.println("You had " + numCorrect + " correct answers, and " + numWrong + " wrong answers! Which would be: " + percentCorrect + "% correct!");
                     System.out.println();
+                    break;
                 case 0:
                     System.out.println("Quitting ferfys math game...");
                     game = false;
@@ -73,7 +76,7 @@ public class FerfsMathGame {
     public static int numCorrect;
     public static int numWrong;
     public static int totalQuestions = 1+numCorrect + numWrong;
-    public static int percentCorrect = numCorrect / totalQuestions;
+    public static float percentCorrect = (float) numCorrect / totalQuestions;
 
 
 
