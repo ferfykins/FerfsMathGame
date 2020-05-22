@@ -7,17 +7,14 @@ import java.util.Scanner;
 public class FerfsMathGame {
 
 
-
-
     public static void main(String[] args) {
-
 
 
         try {
 
             mainMenu();
 
-        } catch  (InputMismatchException e) {
+        } catch (InputMismatchException e) {
             System.out.println("Not a valid number!");
             mainMenu();
         } catch (Exception e) {
@@ -25,14 +22,7 @@ public class FerfsMathGame {
         }
 
 
-
-
-
     }
-
-
-    
-
 
 
     public static void mainMenu() {
@@ -63,6 +53,9 @@ public class FerfsMathGame {
                     break;
                 case 5:
                     System.out.println();
+                    System.out.println();
+                    System.out.println("You had " + numCorrect + " anwers, and " + numWrong + " wrong answers! Which would be: " + percentCorrect + "% correct!");
+                    System.out.println();
                 case 0:
                     System.out.println("Quitting ferfys math game...");
                     game = false;
@@ -77,13 +70,10 @@ public class FerfsMathGame {
 
 
 
-
-
-
-
-
-
-
+    public static int numCorrect;
+    public static int numWrong;
+    public static int totalQuestions = 1+numCorrect + numWrong;
+    public static int percentCorrect = numCorrect / totalQuestions;
 
 
 
@@ -98,9 +88,7 @@ public class FerfsMathGame {
         int difficulty = scan.nextInt();
 
 
-
-
-        if(difficulty == 1) {
+        if (difficulty == 1) {
 
             System.out.println("How many addition questions, would you like?");
             int numberOfQuestions = scan.nextInt();
@@ -114,11 +102,13 @@ public class FerfsMathGame {
 
                 if (answer == num1 + num2) {
                     System.out.println("Your solution was correct!!");
+                    numCorrect++;
                 } else {
                     System.out.println("Your solution was wrong");
+                    numWrong++;
                 }
             }
-        } else if(difficulty == 2) {
+        } else if (difficulty == 2) {
             System.out.println("How many addition questions, would you like?");
             int numberOfQuestions = scan.nextInt();
 
@@ -131,12 +121,14 @@ public class FerfsMathGame {
 
                 if (answer == num1 + num2) {
                     System.out.println("Your solution was correct!!");
+                    numCorrect++;
                 } else {
                     System.out.println("Your solution was wrong");
+                    numWrong++;
                 }
             }
 
-        } else if(difficulty == 3) {
+        } else if (difficulty == 3) {
             System.out.println("How many addition questions, would you like?");
             int numberOfQuestions = scan.nextInt();
 
@@ -149,24 +141,16 @@ public class FerfsMathGame {
 
                 if (answer == num1 + num2) {
                     System.out.println("Your solution was correct!!");
+                    numCorrect++;
                 } else {
                     System.out.println("Your solution was wrong");
+                    numWrong++;
                 }
             }
         }
 
 
-
-
     }
-
-
-
-
-
-
-
-
 
 
     public static void subtractionQuestions() {
@@ -176,8 +160,7 @@ public class FerfsMathGame {
         int difficulty = scan.nextInt();
 
 
-
-        if(difficulty == 1) {
+        if (difficulty == 1) {
 
             System.out.println("How many subtraction questions, would you like?");
             int numberOfQuestions = scan.nextInt();
@@ -191,11 +174,13 @@ public class FerfsMathGame {
 
                 if (answer == num1 - num2) {
                     System.out.println("Your solution was correct!!");
+                    numCorrect++;
                 } else {
                     System.out.println("Your solution was wrong");
+                    numWrong++;
                 }
             }
-        } else if(difficulty == 2) {
+        } else if (difficulty == 2) {
             System.out.println("How many subtraction questions, would you like?");
             int numberOfQuestions = scan.nextInt();
 
@@ -208,11 +193,13 @@ public class FerfsMathGame {
 
                 if (answer == num1 - num2) {
                     System.out.println("Your solution was correct!!");
+                    numCorrect++;
                 } else {
                     System.out.println("Your solution was wrong");
+                    numWrong++;
                 }
             }
-        } else if(difficulty == 3) {
+        } else if (difficulty == 3) {
             System.out.println("How many subtraction questions, would you like?");
             int numberOfQuestions = scan.nextInt();
 
@@ -225,34 +212,16 @@ public class FerfsMathGame {
 
                 if (answer == num1 - num2) {
                     System.out.println("Your solution was correct!!");
+                    numCorrect++;
                 } else {
                     System.out.println("Your solution was wrong");
+                    numWrong++;
                 }
             }
         }
 
 
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     public static void divisionQuestions() {
@@ -275,11 +244,13 @@ public class FerfsMathGame {
 
                 if (answer == num1 / num2) {
                     System.out.println("Your solution was correct!!");
+                    numCorrect++;
                 } else {
                     System.out.println("Your solution was wrong");
+                    numWrong++;
                 }
             }
-        } else if(difficulty == 2) {
+        } else if (difficulty == 2) {
             System.out.println("How many division questions, would you like?");
             int numberOfQuestions = scan.nextInt();
 
@@ -292,11 +263,13 @@ public class FerfsMathGame {
 
                 if (answer == num1 / num2) {
                     System.out.println("Your solution was correct!!");
+                    numCorrect++;
                 } else {
                     System.out.println("Your solution was wrong");
+                    numWrong++;
                 }
             }
-        } else if(difficulty == 3) {
+        } else if (difficulty == 3) {
             System.out.println("How many division questions, would you like?");
             int numberOfQuestions = scan.nextInt();
 
@@ -309,40 +282,16 @@ public class FerfsMathGame {
 
                 if (answer == num1 / num2) {
                     System.out.println("Your solution was correct!!");
+                    numCorrect++;
                 } else {
                     System.out.println("Your solution was wrong");
+                    numWrong++;
                 }
             }
         }
 
 
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     public static void multiplicationQuestions() {
@@ -351,7 +300,7 @@ public class FerfsMathGame {
         System.out.println("What difficulty would you like?: 1 for Beginner, 2 for intermediate, or 3 for advanced!");
         int difficulty = scan.nextInt();
 
-        if(difficulty == 1) {
+        if (difficulty == 1) {
 
             System.out.println("How many multiplication questions, would you like?");
             int numberOfQuestions = scan.nextInt();
@@ -365,11 +314,13 @@ public class FerfsMathGame {
 
                 if (answer == num1 * num2) {
                     System.out.println("Your solution was correct!!");
+                    numCorrect++;
                 } else {
                     System.out.println("Your solution was wrong");
+                    numWrong++;
                 }
             }
-        } else if(difficulty == 2) {
+        } else if (difficulty == 2) {
             System.out.println("How many multiplication questions, would you like?");
             int numberOfQuestions = scan.nextInt();
 
@@ -382,11 +333,13 @@ public class FerfsMathGame {
 
                 if (answer == num1 * num2) {
                     System.out.println("Your solution was correct!!");
+                    numCorrect++;
                 } else {
                     System.out.println("Your solution was wrong");
+                    numWrong++;
                 }
             }
-        } else if(difficulty == 3) {
+        } else if (difficulty == 3) {
             System.out.println("How many multiplication questions, would you like?");
             int numberOfQuestions = scan.nextInt();
 
@@ -399,28 +352,16 @@ public class FerfsMathGame {
 
                 if (answer == num1 * num2) {
                     System.out.println("Your solution was correct!!");
+                    numCorrect++;
                 } else {
                     System.out.println("Your solution was wrong");
+                    numWrong++;
                 }
             }
         }
 
 
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
