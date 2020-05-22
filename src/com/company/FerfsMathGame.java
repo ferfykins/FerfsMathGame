@@ -75,7 +75,7 @@ public class FerfsMathGame {
 
     public static int numCorrect;
     public static int numWrong;
-    public static int totalQuestions = 1+numCorrect + numWrong;
+    public static int totalQuestions = numCorrect + numWrong;
     public static float percentCorrect = (float) numCorrect / totalQuestions;
 
 
