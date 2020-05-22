@@ -54,9 +54,11 @@ public class FerfsMathGame {
                     multiplicationQuestions();
                     break;
                 case 5:
+                    totalQuestions = numCorrect + numWrong;
+                    percentCorrect  = Math.round(((float) numCorrect / totalQuestions) * 100);
                     System.out.println();
                     System.out.println();
-                    System.out.println("You had " + numCorrect + " correct answers, and " + numWrong + " wrong answers! Which would be: " + percentCorrect + "% correct!");
+                    System.out.println("You had " + numCorrect + " correct answers, and " + numWrong + " wrong answers! Which would be: " + percentCorrect + "% correct!" + " There were " + totalQuestions + " total questions!!");
                     System.out.println();
                     break;
                 case 0:
@@ -75,8 +77,9 @@ public class FerfsMathGame {
 
     public static int numCorrect;
     public static int numWrong;
-    public static int totalQuestions = numCorrect + numWrong;
-    public static float percentCorrect = (float) numCorrect / totalQuestions;
+    public static int totalQuestions;
+    public static float percentCorrect;
+
 
 
 
